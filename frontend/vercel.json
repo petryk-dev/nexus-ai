@@ -1,0 +1,12 @@
+{
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@nexus-ai-api-url",
+    "NEXT_PUBLIC_SITE_URL": "@nexus-ai-site-url"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "@nexus-ai-api-url",
+      "NEXT_PUBLIC_SITE_URL": "@nexus-ai-site-url"
+    }
+  }
+}

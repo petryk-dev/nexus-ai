@@ -1,0 +1,21 @@
+{
+  "name": "nexus-ai-backend",
+  "version": "1.0.0",
+  "description": "Nexus AI backend — Express API for chat, RAG, and agent workflows",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "groq-sdk": "^0.7.0",
+    "langsmith": "^0.1.61",
+    "pg": "^8.12.0"
+  }
+}
