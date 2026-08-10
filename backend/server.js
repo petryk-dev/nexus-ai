@@ -20,16 +20,13 @@ const corsOptions = {
     if (!origin) return callback(null, true);
 
     const allowedOrigins = [
+      process.env.FRONTEND_URL,
       "http://localhost:3000",
       "http://localhost:3001",
-      process.env.FRONTEND_URL,
     ].filter(Boolean);
 
     // Also allow any vercel.app subdomain
-    if (
-      allowedOrigins.includes(origin) ||
-      origin.endsWith(".vercel.app")
-    ) {
+    if (allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
       return callback(null, true);
     }
 
@@ -55,7 +52,11 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.get("/health", (req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString(), version: "1.0.0" });
+  res.json({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    version: "1.0.0",
+  });
 });
 
 app.use("/api/chat", chatRoutes);
