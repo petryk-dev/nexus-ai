@@ -2,7 +2,7 @@
 
 > A full-stack AI application demonstrating three core LLM application patterns — streaming chat, retrieval-augmented generation (RAG), and tool-calling agents — in one production-shaped codebase.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-visit_app-3b82f6?style=for-the-badge)](DEMO_URL)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-visit_app-3b82f6?style=for-the-badge)](https://nexus-ai-olive-seven.vercel.app/)
 
 ![Node.js](https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=next.js&logoColor=white)
@@ -29,14 +29,14 @@
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                                    |
-| --------- | ---------------------------------------------- |
-| Frontend  | Next.js 14, TypeScript, Tailwind CSS            |
-| Backend   | Node.js, Express, Groq API                      |
-| Database  | Supabase PostgreSQL, pgvector                   |
-| AI        | Llama 3.3 70B (via Groq), local embeddings (`@xenova/transformers`) |
-| DevOps    | Railway, Vercel, Docker                         |
-| Monitoring| LangSmith                                       |
+| Layer      | Technology                                                          |
+| ---------- | ------------------------------------------------------------------- |
+| Frontend   | Next.js 14, TypeScript, Tailwind CSS                                |
+| Backend    | Node.js, Express, Groq API                                          |
+| Database   | Supabase PostgreSQL, pgvector                                       |
+| AI         | Llama 3.3 70B (via Groq), local embeddings (`@xenova/transformers`) |
+| DevOps     | Railway, Vercel, Docker                                             |
+| Monitoring | LangSmith                                                           |
 
 ---
 
@@ -111,23 +111,23 @@ Open **http://localhost:3000** — the backend must be running for any mode to w
 
 ### Backend (`backend/.env`)
 
-| Variable                | Required | Description                                      |
-| ------------------------ | :------: | ------------------------------------------------- |
-| `PORT`                   |    –     | Server port (defaults to `8080`)                   |
-| `FRONTEND_URL`           |    ✅    | Frontend origin allowed by CORS                    |
-| `GROQ_API_KEY`           |    ✅    | Groq API key                                       |
-| `GROQ_MODEL`             |    –     | Defaults to `llama-3.3-70b-versatile`               |
-| `DATABASE_URL`           |    ✅    | Supabase Postgres connection string                |
-| `LANGCHAIN_API_KEY`      |    ✅    | LangSmith API key                                  |
-| `LANGCHAIN_TRACING_V2`   |    –     | Set `true` to enable tracing                       |
-| `LANGCHAIN_PROJECT`      |    –     | LangSmith project name (defaults to `nexus-ai`)    |
+| Variable               | Required | Description                                     |
+| ---------------------- | :------: | ----------------------------------------------- |
+| `PORT`                 |    –     | Server port (defaults to `8080`)                |
+| `FRONTEND_URL`         |    ✅    | Frontend origin allowed by CORS                 |
+| `GROQ_API_KEY`         |    ✅    | Groq API key                                    |
+| `GROQ_MODEL`           |    –     | Defaults to `llama-3.3-70b-versatile`           |
+| `DATABASE_URL`         |    ✅    | Supabase Postgres connection string             |
+| `LANGCHAIN_API_KEY`    |    ✅    | LangSmith API key                               |
+| `LANGCHAIN_TRACING_V2` |    –     | Set `true` to enable tracing                    |
+| `LANGCHAIN_PROJECT`    |    –     | LangSmith project name (defaults to `nexus-ai`) |
 
 ### Frontend (`frontend/.env.local`)
 
-| Variable                 | Required | Description                                 |
-| -------------------------- | :------: | --------------------------------------------- |
-| `NEXT_PUBLIC_API_URL`      |    ✅    | URL of the backend API                        |
-| `NEXT_PUBLIC_SITE_URL`     |    –     | Deployed frontend URL, used to resolve `og:image` |
+| Variable               | Required | Description                                       |
+| ---------------------- | :------: | ------------------------------------------------- |
+| `NEXT_PUBLIC_API_URL`  |    ✅    | URL of the backend API                            |
+| `NEXT_PUBLIC_SITE_URL` |    –     | Deployed frontend URL, used to resolve `og:image` |
 
 ---
 
